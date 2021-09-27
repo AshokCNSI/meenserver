@@ -9,9 +9,8 @@ import java.util.Map;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Version;
 
-@Entity(name="district")
+@Entity(name="District")
 public class District implements Serializable {
 
     /** Primary key. */
@@ -20,7 +19,6 @@ public class District implements Serializable {
     /**
      * The optimistic lock. Available via standard bean get/set operations.
      */
-    @Version
     @Column(name="LOCK_FLAG")
     private Integer lockFlag;
 

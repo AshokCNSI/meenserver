@@ -9,9 +9,9 @@ import java.util.Map;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Version;
 
-@Entity(name="state")
+
+@Entity(name="State")
 public class State implements Serializable {
 
     /** Primary key. */
@@ -20,7 +20,7 @@ public class State implements Serializable {
     /**
      * The optimistic lock. Available via standard bean get/set operations.
      */
-    @Version
+    
     @Column(name="LOCK_FLAG")
     private Integer lockFlag;
 

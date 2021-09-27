@@ -9,9 +9,8 @@ import java.util.Map;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Version;
 
-@Entity(name="lookup")
+@Entity(name="Lookup")
 public class Lookup implements Serializable {
 
     /** Primary key. */
@@ -20,7 +19,6 @@ public class Lookup implements Serializable {
     /**
      * The optimistic lock. Available via standard bean get/set operations.
      */
-    @Version
     @Column(name="LOCK_FLAG")
     private Integer lockFlag;
 
@@ -334,29 +332,4 @@ public class Lookup implements Serializable {
         result = 37*result + i;
         return result;
     }
-
-    /**
-     * Returns a debug-friendly String representation of this instance.
-     *
-     * @return String representation of this instance
-     */
-    @Override
-    public String toString() {
-        StringBuffer sb = new StringBuffer("[Lookup |");
-        sb.append(" lookupSid=").append(getLookupSid());
-        sb.append("]");
-        return sb.toString();
-    }
-
-    /**
-     * Return all elements of the primary key.
-     *
-     * @return Map of key names to values
-     */
-    public Map<String, Object> getPrimaryKey() {
-        Map<String, Object> ret = new LinkedHashMap<String, Object>(6);
-        ret.put("lookupSid", Integer.valueOf(getLookupSid()));
-        return ret;
-    }
-
-}
+}

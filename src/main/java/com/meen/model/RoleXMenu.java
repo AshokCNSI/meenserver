@@ -9,9 +9,11 @@ import java.util.Map;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Version;
+import javax.persistence.Table;
 
-@Entity(name="role_x_menu")
+
+@Entity
+@Table(name = "role_x_menu")
 public class RoleXMenu implements Serializable {
 
     /** Primary key. */
@@ -20,7 +22,7 @@ public class RoleXMenu implements Serializable {
     /**
      * The optimistic lock. Available via standard bean get/set operations.
      */
-    @Version
+    
     @Column(name="LOCK_FLAG")
     private Integer lockFlag;
 

@@ -2,10 +2,12 @@ package com.meen.dao;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 import com.meen.model.UserXAddressBook;
 import com.meen.model.Users;
 
+@Repository
 public interface UserDao extends CrudRepository<Users, Integer>{
 	
 	@Query("SELECT u FROM Users u WHERE u.userSid = ?1")

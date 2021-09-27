@@ -9,9 +9,8 @@ import java.util.Map;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Version;
 
-@Entity(name="category")
+@Entity(name="Category")
 public class Category implements Serializable {
 
     /** Primary key. */

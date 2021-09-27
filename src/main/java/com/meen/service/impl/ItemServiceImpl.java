@@ -1,11 +1,13 @@
 package com.meen.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.meen.dao.ItemDao;
 import com.meen.model.Item;
 import com.meen.service.ItemService;
 
+@Service
 public class ItemServiceImpl implements ItemService{
 	
 	@Autowired

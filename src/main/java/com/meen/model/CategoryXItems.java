@@ -9,9 +9,10 @@ import java.util.Map;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Version;
+import javax.persistence.Table;
 
-@Entity(name="category_x_items")
+@Entity
+@Table(name = "category_x_items")
 public class CategoryXItems implements Serializable {
 
     /** Primary key. */
@@ -20,7 +21,6 @@ public class CategoryXItems implements Serializable {
     /**
      * The optimistic lock. Available via standard bean get/set operations.
      */
-    @Version
     @Column(name="LOCK_FLAG")
     private Integer lockFlag;
 
